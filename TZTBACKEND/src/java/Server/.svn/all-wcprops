@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/14/trunk/TZTBACKEND/src/java/Server
+END
+SendableObject.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/14/trunk/TZTBACKEND/src/java/Server/SendableObject.java
+END
+ApiCall.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/14/trunk/TZTBACKEND/src/java/Server/ApiCall.java
+END
+URLRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/14/trunk/TZTBACKEND/src/java/Server/URLRequest.java
+END
+HttpResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/14/trunk/TZTBACKEND/src/java/Server/HttpResponse.java
+END

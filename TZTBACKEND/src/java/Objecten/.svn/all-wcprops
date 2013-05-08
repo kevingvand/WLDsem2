@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/18/trunk/TZTBACKEND/src/java/Objecten
+END
+Pakket.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/14/trunk/TZTBACKEND/src/java/Objecten/Pakket.java
+END
+Gebruiker.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/14/trunk/TZTBACKEND/src/java/Objecten/Gebruiker.java
+END
+Koerier.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/14/trunk/TZTBACKEND/src/java/Objecten/Koerier.java
+END
+Checkin.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/14/trunk/TZTBACKEND/src/java/Objecten/Checkin.java
+END
+Opdracht.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/14/trunk/TZTBACKEND/src/java/Objecten/Opdracht.java
+END
+OvKoerier.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/14/trunk/TZTBACKEND/src/java/Objecten/OvKoerier.java
+END
+Klacht.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/14/trunk/TZTBACKEND/src/java/Objecten/Klacht.java
+END
+Klant.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/14/trunk/TZTBACKEND/src/java/Objecten/Klant.java
+END
+Collectiepunt.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/14/trunk/TZTBACKEND/src/java/Objecten/Collectiepunt.java
+END
+Traject.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/14/trunk/TZTBACKEND/src/java/Objecten/Traject.java
+END
+Adres.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/18/trunk/TZTBACKEND/src/java/Objecten/Adres.java
+END
+Route.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/14/trunk/TZTBACKEND/src/java/Objecten/Route.java
+END
+Notificatie.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/14/trunk/TZTBACKEND/src/java/Objecten/Notificatie.java
+END
