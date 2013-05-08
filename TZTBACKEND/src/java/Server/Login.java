@@ -46,7 +46,6 @@ public class Login extends HttpServlet {
             } else {
                 s.setAttribute("login", false);
             }
-            Gebruiker geb = new Gebruiker(1, "boe", "boee");
             HttpResponse resp = new HttpResponse(200, s.getAttribute("login"));
             out.println(resp);
         } catch(Exception e){

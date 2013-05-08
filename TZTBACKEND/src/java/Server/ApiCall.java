@@ -5,21 +5,14 @@ package Server;
  * and open the template in the editor.
  */
 
+import Action.*;
 import com.google.gson.Gson;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.io.IOException;
+import java.util.logging.*;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 
 /**
  *
@@ -39,19 +32,29 @@ public class ApiCall extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("application/json;charset=UTF-8");
         PrintWriter out = response.getWriter();
+        HttpSession session = request.getSession();
+        session.setAttribute("login", true);
+        HttpResponse r = null;
         try {
             String classname = request.getParameter("action").substring(3);
+            Action a = (Action) Class.forName("Actions."+ classname).newInstance();
+            a.load(request);
+            String type = request.getParameter("action").substring(0, 3);
             
-           /* Test a = (Test) Class.forName(classname).newInstance();
-            a.id = Integer.parseInt(request.getParameter("id"));
-            
-            HttpResponse r = new HttpResponse(200,a);            
-            out.println(r);*/
+            if(type.equals("get")) {
+                Object returnObj = a.get();
+                r = new HttpResponse(200,returnObj);
+            } else if (type.equals("set")) {
+                boolean saved = a.set();
+                r = new HttpResponse(200,saved);
+            }
         } catch (Exception ex) {
             Logger.getLogger(ApiCall.class.getName()).log(Level.SEVERE, null, ex);
+            r = new HttpResponse(500,ex.toString());
         } finally {
+            out.println(r);
             out.close();
         }
     }

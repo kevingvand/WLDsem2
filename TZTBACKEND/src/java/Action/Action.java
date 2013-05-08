@@ -14,4 +14,7 @@ public abstract class Action {
     
     public abstract void load(HttpServletRequest hsr);
     
+    public abstract Object get();
+    
+    public abstract boolean set();
 }

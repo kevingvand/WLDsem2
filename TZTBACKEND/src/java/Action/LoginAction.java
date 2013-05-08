@@ -43,4 +43,14 @@ public class LoginAction extends Action{
         GebruikerDB gb = new GebruikerDB();
         gb.verwijderGebruiker(this.id);
     }
+
+    @Override
+    public Object get() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean set() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
