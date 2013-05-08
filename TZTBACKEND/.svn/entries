@@ -1,0 +1,74 @@
+10
+
+dir
+18
+https://kevingvand%40gmail.com@windesheim-semester2.googlecode.com/svn/trunk/TZTBACKEND
+https://kevingvand%40gmail.com@windesheim-semester2.googlecode.com/svn
+
+
+
+2013-04-29T14:28:53.774244Z
+18
+kevingvand@gmail.com
+has-props
+has-prop-mods
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+357641c6-c6ce-54dd-bd65-e15ccf10babf
+
+build.xml
+file
+
+
+
+
+2013-04-29T14:50:57.000000Z
+c5680a73288d8396ad7f5b81e6007374
+2013-04-29T13:56:19.997771Z
+12
+kevingvand@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3430
+
+dist
+dir
+
+nbproject
+dir
+
+src
+dir
+
+web
+dir
+
