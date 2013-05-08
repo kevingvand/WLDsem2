@@ -8,7 +8,7 @@ import java.util.*;
 public class Traject {
 
     private int id;
-    private int afstand;
+    private double afstand;
     private int koerierid;
     private Date datetime;
 
@@ -20,11 +20,15 @@ public class Traject {
         this.id = id;
     }
 
-    public int getAfstand() {
+    public double getAfstand() {
         return afstand;
     }
 
     public void setAfstand(int afstand) {
+        this.afstand = afstand;
+    }
+
+    public void setAfstand(double afstand) {
         this.afstand = afstand;
     }
 
