@@ -3,13 +3,8 @@
  * and open the template in the editor.
  */
 
-import Action.LoginAction;
-import Functies.CreateObjectFromJson;
-import Database.GebruikerDB;
-import Objecten.Gebruiker;
-import Database.InloggenDB;
+import Database.KoerierDB;
 import java.sql.SQLException;
-import javax.servlet.http.HttpServletRequest;
 
 /**
  *
@@ -19,7 +14,11 @@ public class Main {
    
     
     public static void main(String[] args) throws SQLException, Exception{
-        CreateObjectFromJson cofj = new CreateObjectFromJson();
+       // CreateObjectFromJson cofj = new CreateObjectFromJson();
+        KoerierDB koerier = new KoerierDB();
+        koerier.fillKoeriersLijst();
+        
+        System.out.println(koerier.getKoerierslijst());
     }
     
 }

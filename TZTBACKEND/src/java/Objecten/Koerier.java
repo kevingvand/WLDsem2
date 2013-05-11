@@ -15,6 +15,15 @@ public class Koerier {
     private int adresid;
     private int telefoonnummer;
     private String email;
+    
+    public Koerier(int id, String naam, double tarief, int adresid, int telefoonnummer, String email){
+        this.id = id;
+        this.naam = naam;
+        this.tarief = tarief;
+        this.adresid = adresid;
+        this.telefoonnummer = telefoonnummer;
+        this.email = email;
+    }
 
     public int getId() {
         return id;
@@ -62,5 +71,9 @@ public class Koerier {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+    
+    public String toString(){
+        return "Koerier: " + this.naam + " | ";
     }
 }
