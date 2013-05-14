@@ -14,7 +14,7 @@ public class Klant {
     private String achternaam;
     private String bedrijfsnaam;
     private int adresid;
-    private int telefoonummer;
+    private String telefoonummer;
     private String email;
     private String rekeningnummer;
 
@@ -58,11 +58,11 @@ public class Klant {
         this.adresid = adresid;
     }
 
-    public int getTelefoonummer() {
+    public String getTelefoonummer() {
         return telefoonummer;
     }
 
-    public void setTelefoonummer(int telefoonummer) {
+    public void setTelefoonummer(String telefoonummer) {
         this.telefoonummer = telefoonummer;
     }
 

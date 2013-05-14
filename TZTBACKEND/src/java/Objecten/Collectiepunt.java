@@ -14,6 +14,8 @@ public class Collectiepunt {
     private int actief;
     private int verantwoordelijke;
     private int adresid;
+    private double latitude;
+    private double longitude;
 
     public int getId() {
         return id;
@@ -53,6 +55,34 @@ public class Collectiepunt {
 
     public void setAdresid(int adresid) {
         this.adresid = adresid;
+    }
+
+    /**
+     * @return the latitude
+     */
+    public double getLatitude() {
+        return latitude;
+    }
+
+    /**
+     * @param latitude the latitude to set
+     */
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    /**
+     * @return the longitude
+     */
+    public double getLongitude() {
+        return longitude;
+    }
+
+    /**
+     * @param longitude the longitude to set
+     */
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
     }
 
 }

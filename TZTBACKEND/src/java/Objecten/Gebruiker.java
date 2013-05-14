@@ -17,6 +17,10 @@ public class Gebruiker {
     private String wachtwoord;
     private int rol;
     
+    public Gebruiker() {
+        
+    }
+    
     public Gebruiker(int id, String gebruikersnaam, String wachtwoord){
         this.id = id;
         this.gebruikersnaam = gebruikersnaam;

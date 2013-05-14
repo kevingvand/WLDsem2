@@ -10,6 +10,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  *
@@ -25,8 +26,7 @@ public class TrajectDb {
         
         try {
             Traject t = new Traject();
-            Connection c = TrajectDb.getConnection();
-            PreparedStatement p = c.prepareStatement("SELECT * FROM Trajecten WHERE id = ? LIMIT 1");
+            PreparedStatement p = Database.getInstance().getPreparedStatement("SELECT * FROM traject WHERE id = ? LIMIT 1");
             p.setInt(1, id);
             ResultSet rs = p.executeQuery();
             
@@ -36,6 +36,69 @@ public class TrajectDb {
         } catch(Exception ex) {}
         
         return null;        
+    }
+    
+    public static ArrayList<Traject> getTrajectByKoerierId(int id) {
+        ArrayList al = new ArrayList<Traject>();
+        Traject t;
+        try {
+            PreparedStatement p = Database.getInstance().getPreparedStatement("SELECT * FROM traject WHERE koerierid = ?");
+            p.setInt(1, id);
+            ResultSet rs = p.executeQuery();
+            while(rs.next()) {
+                t = new Traject();
+                TrajectDb.VulTraject(t, rs);
+                al.add(t);
+            }
+            return al;
+        } catch (Exception e) {}
+        return null;
+    }
+    
+    /**
+     * Haal alle trajecten op met startlocatie x en eindlocatie y
+     * @param start int
+     * @param end int
+     * @return 
+     */
+    public static ArrayList<Traject> getTrajectByStartAndEndLocationId(int start, int end) {
+        ArrayList al = new ArrayList<Traject>();
+        Traject t;
+        try {
+            PreparedStatement p = Database.getInstance().getPreparedStatement("SELECT * FROM traject WHERE beginlocatie = ? AND eindlocatie = ?");
+            p.setInt(1, start);
+            p.setInt(2, end);
+            ResultSet rs = p.executeQuery();
+            while(rs.next()) {
+                t = new Traject();
+                TrajectDb.VulTraject(t, rs);
+                al.add(t);
+            }
+            return al;
+        } catch (Exception e) {}
+        return null;
+    }
+    
+    /**
+     * Haal alle Trajecten op die vanaf id locatie komen
+     * @param id int
+     * @return 
+     */
+    public static ArrayList<Traject> getTrajectByStartLocationId(int id) {
+        ArrayList al = new ArrayList<Traject>();
+        Traject t;
+        try{
+            PreparedStatement p = Database.getInstance().getPreparedStatement("SELECT * FROM traject WHERE beginlocatie = ?");
+            p.setInt(1, id);
+            ResultSet rs = p.executeQuery();
+            while(rs.next()) {
+                t = new Traject();
+                TrajectDb.VulTraject(t, rs);
+                al.add(t);
+            }
+            return al;
+        } catch (Exception e){}
+        return null;
     }
     
     /**
@@ -49,14 +112,5 @@ public class TrajectDb {
         t.setAfstand(s.getDouble("afstand"));
         t.setDatetime(s.getDate("datetime"));
         t.setKoerierid(s.getInt("koerierid"));
-    }
-    
-    /**
-     * Get database connection
-     * @return
-     * @throws SQLException 
-     */
-    public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection("jdbc:mysql://159.253.7.224:3306/kevined104_tzt", "kevined104_tzt", "tzters");
     }
 }
